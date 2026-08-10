@@ -1,0 +1,110 @@
+/* ==================================================================
+   CONTACTO · Estilos específicos de la página
+   ================================================================== */
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-xl);
+  align-items: stretch;
+}
+
+/* --- Tarjeta grande de WhatsApp --- */
+.whatsapp-card {
+  background: linear-gradient(140deg, var(--color-navy-950), var(--color-navy-800));
+  color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.whatsapp-card i {
+  font-size: 3rem;
+  color: var(--color-whatsapp);
+  margin-bottom: var(--space-md);
+}
+
+.whatsapp-card h2 {
+  color: var(--color-white);
+  margin-bottom: var(--space-sm);
+}
+
+.whatsapp-card p {
+  color: var(--color-gray-200);
+  margin-bottom: var(--space-md);
+}
+
+/* --- Datos de contacto --- */
+.datos-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.dato-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background-color: var(--color-off-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-100);
+}
+
+.dato-item i {
+  font-size: 1.4rem;
+  color: var(--color-gold-500);
+  margin-top: 4px;
+  width: 28px;
+}
+
+.dato-item h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.dato-item p {
+  color: var(--color-gray-600);
+  font-size: 0.92rem;
+}
+
+.contacto-social {
+  margin-top: 8px;
+}
+
+.contacto-social a {
+  border-color: var(--color-gray-200);
+  color: var(--color-navy-900);
+}
+
+.contacto-social a:hover {
+  background-color: var(--color-gold-500);
+  border-color: var(--color-gold-500);
+  color: var(--color-navy-950);
+}
+
+/* --- Mapa --- */
+.mapa-wrap {
+  width: 100%;
+  height: 420px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-lg);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .mapa-wrap {
+    height: 300px;
+  }
+}

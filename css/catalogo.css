@@ -1,0 +1,111 @@
+/* ==================================================================
+   CATÁLOGO · Estilos específicos de la página
+   ================================================================== */
+
+/* --- Navegación de categorías (sticky) --- */
+.cat-nav {
+  position: sticky;
+  top: 92px;
+  z-index: 400;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.cat-nav-list {
+  display: flex;
+  gap: var(--space-md);
+  overflow-x: auto;
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  scrollbar-width: thin;
+}
+
+.cat-nav-list a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-navy-900);
+  white-space: nowrap;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.cat-nav-list a:hover {
+  background-color: var(--color-off-white);
+  color: var(--color-gold-600);
+}
+
+/* --- Título de categoría --- */
+.cat-titulo {
+  max-width: 680px;
+  margin: 0 auto var(--space-lg);
+  text-align: center;
+  scroll-margin-top: 160px;
+}
+
+.cat-section {
+  scroll-margin-top: 150px;
+}
+
+.cat-titulo h2 {
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  margin-bottom: var(--space-xs);
+}
+
+.cat-titulo p {
+  color: var(--color-gray-600);
+}
+
+/* --- Características de producto --- */
+.caracteristicas {
+  margin-bottom: var(--space-sm);
+}
+
+.caracteristicas li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.85rem;
+  color: var(--color-gray-600);
+  margin-bottom: 4px;
+}
+
+.caracteristicas li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-gold-500);
+  border-radius: 50%;
+}
+
+/* --- CTA final --- */
+.cat-cta-box {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.cat-cta-box h2 {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  margin: var(--space-xs) 0;
+}
+
+.cat-cta-box p {
+  color: var(--color-gray-600);
+  max-width: 460px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+  .cat-nav { top: 76px; }
+  .cat-cta-box { flex-direction: column; text-align: center; }
+}

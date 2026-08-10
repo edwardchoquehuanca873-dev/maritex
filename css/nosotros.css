@@ -1,0 +1,153 @@
+/* ==================================================================
+   NOSOTROS · Estilos específicos de la página
+   ================================================================== */
+
+/* --- Historia --- */
+.historia-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.historia-media img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.historia-texto h2 {
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  margin-bottom: var(--space-sm);
+}
+
+.historia-texto p {
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-sm);
+}
+
+.historia-texto .btn {
+  margin-top: var(--space-sm);
+}
+
+/* --- Misión / Visión --- */
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.mv-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg) var(--space-md);
+  box-shadow: var(--shadow-sm);
+  border-top: 3px solid var(--color-gold-500);
+  text-align: center;
+}
+
+.mv-card i {
+  font-size: 2rem;
+  color: var(--color-navy-950);
+  margin-bottom: var(--space-sm);
+}
+
+.mv-card h3 {
+  margin-bottom: var(--space-xs);
+}
+
+.mv-card p {
+  color: var(--color-gray-600);
+}
+
+/* --- Valores --- */
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.valor-card {
+  text-align: center;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.valor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-sm);
+}
+
+.valor-card i {
+  font-size: 1.8rem;
+  color: var(--color-gold-500);
+  margin-bottom: var(--space-sm);
+}
+
+.valor-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.valor-card p {
+  color: var(--color-gray-600);
+  font-size: 0.9rem;
+}
+
+/* --- Experiencia --- */
+.experiencia-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  text-align: center;
+}
+
+.experiencia-stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  color: var(--color-navy-950);
+}
+
+.experiencia-stat span {
+  color: var(--color-gray-600);
+  font-size: 0.9rem;
+}
+
+/* --- Compromiso / CTA --- */
+.compromiso-box {
+  background: linear-gradient(120deg, var(--color-navy-950), var(--color-navy-800));
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  color: var(--color-white);
+  flex-wrap: wrap;
+}
+
+.compromiso-box h2 {
+  color: var(--color-white);
+  margin-bottom: var(--space-xs);
+}
+
+.compromiso-box p {
+  color: var(--color-gray-200);
+  max-width: 480px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .historia-grid { grid-template-columns: 1fr; }
+  .historia-media { max-width: 460px; margin: 0 auto; }
+  .valores-grid { grid-template-columns: repeat(2, 1fr); }
+  .experiencia-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .mv-grid { grid-template-columns: 1fr; }
+  .valores-grid { grid-template-columns: 1fr; }
+  .experiencia-grid { grid-template-columns: 1fr; }
+  .compromiso-box { flex-direction: column; text-align: center; padding: var(--space-lg); }
+}
