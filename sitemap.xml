@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://maritextelas.com/</loc>
   </url>
+
+  <url>
+    <loc>https://maritextelas.com/nosotros.html</loc>
+  </url>
+
+  <url>
+    <loc>https://maritextelas.com/catalogo.html</loc>
+  </url>
+
+  <url>
+    <loc>https://maritextelas.com/servicios.html</loc>
+  </url>
+
+  <url>
+    <loc>https://maritextelas.com/galeria.html</loc>
+  </url>
+
+  <url>
+    <loc>https://maritextelas.com/contacto.html</loc>
+  </url>
+
 </urlset>
